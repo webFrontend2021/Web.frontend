@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Toggle hide/show</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <input id="password" class="password--input" type="text" />
+
+      <div class="password--icons">
+        <i id="showIcon" onclick="show()" class="far fa-eye fa-3x"></i>
+        <i id="hideIcon" onclick="hide()" class="far fa-eye-slash fa-3x"></i>
+      </div>
+    </div>
+    <!--container -->
+
+    <!-- javascript================================================================== -->
+    <script>
+      const showIcon = document.getElementById("showIcon");
+      const hideIcon = document.getElementById("hideIcon");
+      const password = document.getElementById("password");
+
+      function show() {
+        password.type = "text";
+        hideIcon.style.display = "block";
+        showIcon.style.display = "none";
+      }
+      function hide() {
+        password.type = "password";
+        hideIcon.style.display = "none";
+        showIcon.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 60px;
+  display: flex;
+  border: 1px solid black;
+}
+
+.password--input {
+  width: 80%;
+  height: 100%;
+  outline: 1px solid transparent;
+  font-size: 2rem;
+}
+
+.password--icons {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+}
+/* Adding position absolute to this two icons so that they overlap */
+.password--icons > * {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.3em;
+}
+
+/* Hiding the show icon ,we will set it to visible using jsvsacript */
+#showIcon {
+  display: none;
+}
